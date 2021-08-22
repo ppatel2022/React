@@ -4,3 +4,6 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+// Run following command @ ~/01-starting-setup/src/components/
+// npm start index
