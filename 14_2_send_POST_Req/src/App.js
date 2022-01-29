@@ -13,7 +13,13 @@ function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('https://swapi.dev/api/films/');
+      const response = await fetch('https://swapi.dev/api/films/', {
+        method: 'GET',
+        headers: {    // Headers is Default and NOT require, but its good practice...
+          'Content-Type': 'application/json'
+        }
+        // body: JSON.stringify(data_for_POST_request)
+      });
       if (!response.ok) {
         throw new Error('Something went wrong!');
       }
